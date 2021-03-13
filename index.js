@@ -28,7 +28,7 @@ http.createServer(function (req, res) {
       (addr.searchParams.get('data')
         .replace('-', '+').replace('_', '/')));
 
-    if (b.byteLength < 2 + 33 * 4) {
+    if (b.byteLength != 2 + 33 * 4) {
       return;
     }
 
